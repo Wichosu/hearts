@@ -28,6 +28,7 @@ body{
         padding: 0;
         font-weight: 900;
         color: $text;
+        cursor: default;
 
         @media only screen and (max-width: $ipadWidth){
             font-size: 2.9rem;
@@ -50,6 +51,7 @@ body{
         padding: 0;
         font-weight: 800;
         color: $text;
+        cursor: default;
         
         .container__ancle{
             text-decoration: none;
