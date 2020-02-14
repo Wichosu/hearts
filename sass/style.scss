@@ -1,0 +1,167 @@
+$containerBackground: rgba(255, 148, 148, 0.466);
+$text: rgba(116, 32, 32, 0.808);
+
+body{
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.container{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: $containerBackground;
+
+    &__title{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-100%);
+        width: 100%;
+        text-align: center;
+        font-family: cursive;
+        font-size: 3.3rem;
+        margin: 0;
+        padding: 0;
+        font-weight: 900;
+        color: $text;
+    }
+
+    &__credits{
+        position: absolute;
+        top: 52%;
+        width: 100%;
+        text-align: center;
+        font-family: cursive;
+        font-size: 1.2rem;
+        margin: 0;
+        padding: 0;
+        font-weight: 800;
+        color: $text;
+        
+        .container__ancle{
+            text-decoration: none;
+            color: darken($color: $text, $amount: 15);
+        }
+    }
+
+    &__set{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+
+        .container__hearts{
+            position: absolute;
+            display: block;
+            width: 100px;
+            height: 100px;
+    
+            
+            &:nth-child(1){
+                left: 10%;
+                animation: animate 8s linear infinite;
+                animation-delay: -1s;
+            }
+            
+            &:nth-child(2){
+                left: 22%;
+                animation: animate 9s linear infinite;
+                animation-delay: -4s;
+            }
+            
+            &:nth-child(3){
+                left: 30%;
+                animation: animate 7s linear infinite;
+            }
+            
+            &:nth-child(4){
+                left: 40%;
+                animation: animate 9s linear infinite;
+                animation-delay: -3s;
+            }
+            
+            &:nth-child(5){
+                left: 54%;
+                animation: animate 10s linear infinite;
+                animation-delay: -4s
+            }
+            
+            &:nth-child(6){
+                left: 63%;
+                animation: animate 11s linear infinite;
+            }
+            
+            &:nth-child(7){
+                left: 75%;
+                animation: animate 8s linear infinite;
+                animation-delay: -5s;
+            }
+            
+            &:nth-child(8){
+                left: 82%;
+                animation: animate 7s linear infinite;
+                animation-delay: -1s;
+            }
+            
+            &:nth-child(9){
+                left: 5%;
+                animation: animate 6s linear infinite;
+                animation-delay: -4s;
+            }
+    
+            &:nth-child(10){
+                left: 93%;
+                animation: animate 8s linear infinite;
+                animation-delay: -1s;
+            }
+    
+            @keyframes animate {
+                0%{
+                    opacity: 0;
+                    top: -10%;
+                    transform: translateX(-20px) rotate(0deg);
+                }
+                10%{
+                    opacity: 1;
+                }
+                20%{
+                    transform: translateX(-10px) rotate(30deg);
+                }
+                35%{
+                    transform: translateX(-15px) rotate(0deg);
+                }
+                50%{
+                    transform: translateX(-20px) rotate(-30deg);
+                }
+                60%{
+                    transform: translateX(-25px) rotate(0deg);
+                }
+                75%{
+                    transform: translateX(-10px) rotate(30deg);
+                }
+                90%{
+                    transform: translateX(-10px) rotate(0deg);
+                }
+                100%{
+                    top: 110%;
+                    transform: translateX(-10px) rotate(200deg);
+                }
+            }
+        }
+        
+        &--background{
+            transform: scale(0.7) rotateX(180deg);
+            filter: blur(4px);
+        }
+
+        &--front{
+            transform: scale(1.3) rotateY(180deg);
+            filter: blur(2px);
+        }
+    }
+
+}
+
+
